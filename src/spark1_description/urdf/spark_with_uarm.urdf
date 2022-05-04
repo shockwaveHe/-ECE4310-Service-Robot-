@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+
+<robot
+  name="spark1_description">
+  <link name="base_footprint"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00072144 -0.00035641 0.033136"
+        rpy="0 0 0" />
+      <mass
+        value="3.12" />
+      <inertia
+        ixx="0.0062897"
+        ixy="-3.2912E-05"
+        ixz="2.9941E-05"
+        iyy="0.0066505"
+        iyz="-2.0973E-06"
+        izz="0.012548" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_footprint_joint" type="fixed">
+       <origin xyz="0 0 0.033136" rpy="0 0 0" />
+       <parent link="base_footprint" />
+       <child link="base_link" />
+  </joint>
+
+
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.923E-09 -0.007882 4.7005E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.015929" />
+      <inertia
+        ixx="7.3462E-06"
+        ixy="7.0546E-13"
+        ixz="2.1869E-12"
+        iyy="1.4269E-05"
+        iyz="-4.1255E-13"
+        izz="7.3462E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0050358 0.1405 0.02385"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.1884E-08 0.007882 3.1186E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.01593" />
+      <inertia
+        ixx="7.3465E-06"
+        ixy="-1.0054E-12"
+        ixz="3.334E-12"
+        iyy="1.427E-05"
+        iyz="1.3676E-12"
+        izz="7.3465E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0050358 -0.1405 0.02385"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.2018E-10 0.010986 1.7444E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050555" />
+      <inertia
+        ixx="3.1204E-07"
+        ixy="4.686E-16"
+        ixz="5.9466E-12"
+        iyy="2.3622E-07"
+        iyz="-6.8184E-16"
+        izz="3.121E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/front_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/front_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.10447 -0.0112 0.0010298"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rear_wheel_Link">
+    <inertial>
+      <origin
+        xyz="4.8017E-15 0.011415 -3.4202E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030841" />
+      <inertia
+        ixx="2.0624E-07"
+        ixy="3.5524E-20"
+        ixz="1.3621E-11"
+        iyy="1.9519E-07"
+        iyz="-1.1415E-19"
+        izz="2.0613E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/rear_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/rear_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.13753 -0.0102 0.0010294"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="lidar_Link">
+    <inertial>
+      <originF
+        xyz="-8.5501E-05 0.005348 0.017372"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="3.3596E-05"
+        ixy="3.2628E-07"
+        ixz="-6.6209E-08"
+        iyy="3.4521E-05"
+        iyz="1.0213E-08"
+        izz="6.6207E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0047657 0 0.0785"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link name="virtual_lidar_link" />
+  <joint name="virtual_lidar_joint"
+		type="fixed">
+		<origin
+      xyz="0 0 0.03"
+      rpy="0 0 0" />
+		<parent link="lidar_Link" />
+		<child link="virtual_lidar_link" />
+	</joint>
+  <link name="virtual_camera_link" />
+  <joint name="virtual_camera_joint"
+		type="fixed">
+		<origin
+      xyz="0 0 0.03"
+      rpy="0 0 0" />
+		<parent link="camera_Link" />
+		<child link="virtual_camera_link" />
+	</joint>	
+  <link
+    name="stack_Link">
+    <inertial>
+      <origin
+        xyz="-0.044551 0.00021893 0.19459"
+        rpy="0 0 0" />
+      <mass
+        value="0.61249" />
+      <inertia
+        ixx="0.0072644"
+        ixy="1.8962E-12"
+        ixz="-8.5626E-05"
+        iyy="0.0072942"
+        iyz="-1.9551E-07"
+        izz="0.0020995" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/stack_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/stack_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stack_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0047657 0 0.132"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="stack_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+ 
+
+ 
+<link name="Base">
+	<inertial>
+		<origin xyz="0.010476 0.000747 0.035226" rpy="0 0 0"/>
+		<mass value="1.886"/>
+		<inertia ixx="0.001196219" ixy="-0.000029358" ixz="0.000014859" 
+				 iyy="0.001147997" iyz="0.000016274"  izz="0.001425617"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Base.STL"/>
+		</geometry>
+		<origin xyz = "0 0 0 " rpy = "0 0 0"/>
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+  <joint
+    name="Base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="stack_Link" />
+    <child
+      link="Base" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+<link name="Link1">
+	<inertial>
+		<origin xyz="-0.002175 0 0.029097" rpy="0 0 0"/>
+		<mass value="0.2141"/>
+		<inertia ixx="0.000496945" ixy="-0.000000082" ixz="-0.000002744" 
+				 iyy="0.000150389" iyz="-0.000000002" izz="0.000522487"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link1.STL"/>
+		</geometry>
+		<origin xyz = "0 0 -0.0723" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint1" type="revolute">
+	<axis xyz="0 0 1"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Base"/>
+    <child link="Link1"/>
+	<origin xyz= "0 0 0.0723" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link2">
+	<inertial>
+		<origin xyz="-0.001071 0.001101 0.053193" rpy="0 0 0"/>
+		<mass value="0.026"/>
+		<inertia ixx="0.000061744" ixy="-0.000000025" ixz="-0.000000763" 
+				 iyy="0.000062096" iyz="-0.000001053" izz="0.000002942"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link2.STL"/>
+		</geometry>
+		<origin xyz = "-0.0132 0 -0.1056" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint2" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link1"/>
+    <child link="Link2"/>
+	<origin xyz= "0.0132 0 0.0333" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link3">
+	<inertial>
+		<origin xyz="0.101948 -0.00022 0.011917" rpy="0 0 0"/>
+		<mass value="0.023"/>
+		<inertia ixx="0.000001982" ixy="0.000000483" ixz="-0.000005373" 
+				 iyy="0.000081264" iyz="0.000000008" izz="0.000080538"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link3.STL"/>
+		</geometry>
+		<origin xyz="-0.0132 0 -0.24767"/>
+		<material name="">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+	</visual>
+</link>
+
+<joint name="Joint3" type="revolute">
+	<axis xyz="0 1 0"/>
+	<parent link="Link2" />
+	<child link="Link3" />
+	<limit effort="1000" lower="-1.45" upper="1.45" velocity="0"/>
+	<origin xyz="0 0 0.14207 " rpy="0 0 0"/>
+</joint>
+
+
+
+
+<link name="Link4">
+	<inertial>
+		<origin xyz="-0.00235 0.013618 0.015458" rpy="0 0 0"/>
+		<mass value="0.003"/>
+		<inertia ixx="0.000000316" ixy="0.000000001"  ixz="0.000000177" 
+				 iyy="0.000001679" iyz="-0.000000007" izz="0.000001378"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link4.STL"/>
+		</geometry>
+		<origin xyz = "-0.0132 0 -0.24767" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint4" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link2"/>
+    <child link="Link4"/>
+	<origin xyz= "0 0 0.14207" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link5">
+	<inertial>
+		<origin xyz="0.000287 0.0157 0.072444" rpy="0 0 0"/>
+		<mass value="0.003"/>
+		<inertia ixx="0.000004841" ixy="0.000000000" ixz="0.000000023" 
+				 iyy="0.000004863" iyz="0.000000000" izz="0.000000023"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link5.STL"/>
+		</geometry>
+		<origin xyz = "0.0215 0 -0.1223" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint5" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link1"/>
+    <child link="Link5"/>
+	<origin xyz= "-0.0215 0 0.05001" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link6">
+	<inertial>
+		<origin xyz="-0.014 -0.01391 -0.001062" rpy="0 0 0"/>
+		<mass value="0.003"/>
+		<inertia ixx="0.000000074" ixy="-0.000000060" ixz="0.000000055" 
+				 iyy="0.000000951" iyz="-0.000000004" izz="0.000000923"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link6.STL"/>
+		</geometry>
+		<origin xyz = "-0.0132 0 -0.1056" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint6" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link1"/>
+    <child link="Link6"/>
+	<origin xyz= "0.0132 0 0.0333" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link7">
+	<inertial>
+		<origin xyz="-0.001242 -0.013867 0.083246" rpy="0 0 0"/>
+		<mass value="0.003"/>
+		<inertia ixx="0.000007052" ixy="0.000000003" ixz="0.000000055" 
+				 iyy="0.000007058" iyz="0.000000117" izz="0.000000039"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link7.STL"/>
+		</geometry>
+		<origin xyz = "0.0323 0 -0.10258" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint7" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link6"/>
+    <child link="Link7"/>
+	<origin xyz= "-0.0455 0 -0.00301" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link8">
+	<inertial>
+		<origin xyz="0.027288 0.001085 -0.007344" rpy="0 0 0"/>
+		<mass value="0.012"/>
+		<inertia ixx="0.000002184" ixy="0.000000020" ixz="-0.000000207" 
+				 iyy="0.000002992" iyz="0.000000371" izz="0.000001832"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Gripper.STL"/>
+		</geometry>
+		<origin xyz = "-0.17201 0 -0.24651" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint8" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link3"/>
+    <child link="Link8"/>
+	<origin xyz= "0.15852 0 0" rpy = " 0 0 0" />
+</joint>
+
+
+<link name="Link9">
+	<inertial>
+		<origin xyz="-0.079305 0.0157 -0.000043" rpy="0 0 0"/>
+		<mass value="0.003"/>
+		<inertia ixx="0.000000022" ixy="0.000000000" ixz="-0.000000002" 
+				 iyy="0.000006517" iyz="0.000000000" izz="0.000006497"/>
+	</inertial>
+	<visual>
+		<geometry>
+			<mesh filename="package://swiftpro/urdf/pro_links/Link9.STL"/>
+		</geometry>
+		<origin xyz = "-0.19941 0 -0.27471" rpy = "0 0 0" />
+		<material name = "">
+			<color rgba = "0.3 0.3 0.3 1" />
+		</material>
+    </visual>
+</link>
+
+<joint name="Joint9" type="revolute">
+	<axis xyz="0 1 0"/>
+	<limit effort = "1000.0" lower = "-3" upper = "3" velocity = "0" />
+    <parent link="Link8"/>
+    <child link="Link9"/>
+	<origin xyz= "0.02741 0 0.02703" rpy = " 0 0 0" />
+</joint>
+  
+  
+  
+  
+  <link
+    name="central_controller_Link">
+    <inertial>
+      <origin
+        xyz="0.023349 -3.9465E-17 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00064" />
+      <inertia
+        ixx="0.0012642"
+        ixy="6.1091E-19"
+        ixz="1.924E-19"
+        iyy="0.00072067"
+        iyz="-1.8075E-14"
+        izz="0.00076485" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/central_controller_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/central_controller_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="central_controller_joint"
+    type="fixed">
+    <origin
+      xyz="-0.12059 -0.00025 0.16361"
+      rpy="0 0 0" />
+    <parent
+      link="stack_Link" />
+    <child
+      link="central_controller_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_Link">
+    <inertial>
+      <origin
+        xyz="0.0072747 6.2709E-05 0.014459"
+        rpy="0 0 0" />
+      <mass
+        value="0.00032" />
+      <inertia
+        ixx="0.00041082"
+        ixy="9.2737E-08"
+        ixz="2.0538E-07"
+        iyy="4.7924E-05"
+        iyz="2.5746E-10"
+        izz="0.0004303" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.068993 0 0.505"
+      rpy="0 0 0" />
+    <parent
+      link="stack_Link" />
+    <child
+      link="camera_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LED_Link">
+    <inertial>
+      <origin
+        xyz="0.00085791 0.00115 0.044468"
+        rpy="0 0 0" />
+      <mass
+        value="0.000106" />
+      <inertia
+        ixx="0.00043752"
+        ixy="7.5593E-10"
+        ixz="2.2111E-07"
+        iyy="0.00024506"
+        iyz="3.8528E-09"
+        izz="0.0006236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/LED_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spark1_description/meshes/LED_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LED_joint"
+    type="fixed">
+    <origin
+      xyz="-0.048667 -0.0016526 0.47086"
+      rpy="0 0 0" />
+    <parent
+      link="stack_Link" />
+    <child
+      link="LED_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<!-- add some gazebo plugin -->
+<!-- Transmission is important to link the joints and the controller -->
+        　　<transmission name="left_wheel_joint_trans">
+            　　<type>transmission_interface/SimpleTransmission</type>
+            　　<joint name="left_wheel_joint" >
+                　　<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            　　</joint>
+            　　<actuator name="left_wheel_joint_motor">
+                　　<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                　　<mechanicalReduction>1</mechanicalReduction>
+            　　</actuator>
+        　　</transmission>
+
+<!-- Transmission is important to link the joints and the controller -->
+　　<transmission name="right_wheel_joint_trans">
+    　　<type>transmission_interface/SimpleTransmission</type>
+    　　<joint name="right_wheel_joint" >
+        　　<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    　　</joint>
+    　　<actuator name="right_wheel_joint_motor">
+        　　<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        　　<mechanicalReduction>1</mechanicalReduction>
+    　　</actuator>
+　　</transmission>
+
+
+<gazebo reference="rear_wheel_Link">
+       <mu1 value="0"/>
+       <mu2 value="0"/>
+       <kp value="100000000.0"/>
+       <kd value="10000.0"/>
+      </gazebo>
+
+      <gazebo reference="front_wheel_Link">
+       <mu1 value="0"/>
+       <mu2 value="0"/>
+       <kp value="100000000.0"/>
+       <kd value="10000.0"/>
+      </gazebo >
+
+<gazebo reference="left_wheel_link">
+	    <mu1>10</mu1>
+	    <mu2>10</mu2>
+	    <kp>100000000.0</kp>
+	    <kd>10000.0</kd>
+	     <fdir value="1 0 0"/>
+	    <minDepth>0.001</minDepth>
+	    <maxVel>0.4</maxVel>
+	  </gazebo>
+
+ <gazebo reference="right_wheel_link">
+    <mu1>10</mu1>
+    <mu2>10</mu2>
+    <kp>100000000.0</kp>
+    <kd>10000.0</kd>
+     <fdir value="1 0 0"/>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.4</maxVel>
+  </gazebo>
+
+<gazebo>
+         <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+	  
+	    <alwaysOn>true</alwaysOn>
+	    <updateRate>50</updateRate>                      <!-- 数据更新频率 -->
+	    <leftJoint>left_wheel_joint</leftJoint>          <!-- 左轮关节名称 -->
+    	    <rightJoint>right_wheel_joint</rightJoint>       <!-- 右轮关节名称 -->
+	    <wheelSeparation>0.281</wheelSeparation>         <!--旋转中心到一侧驱动轮的距离 -->
+	    <wheelDiameter>0.068</wheelDiameter>             <!-- 轮子直径 -->
+	    <torque>0.1</torque> 			       <!-- 扭矩 -->	
+	    <rosDebugLevel>na</rosDebugLevel> 
+	     <!--     -->                 
+	    <publishOdomTF>true</publishOdomTF>              <!-- 设置true表示发布odom的TF转化信息，默认值为true -->
+	    <odometryTopic>odom</odometryTopic>              <!-- 发布nav_msgs/Odometry消息的话题，默认值为odom -->
+	    <odometryFrame>odom</odometryFrame>    	       <!-- 里程计的坐标系，默认值为odom -->
+	   
+	    <publishWheelTF>false</publishWheelTF>   	       <!-- 设置true表示发布轮子的TF转化信息，默认值为false -->
+	    <wheelTorque>5</wheelTorque>                     <!-- 轮子能提供的最大扭矩，默认值为5 Nm -->
+	    <publishTf>1</publishTf>                          <!-- 设置true表示发布TF转化信息，默认值为true -->
+	    <wheelAcceleration>1</wheelAcceleration>         <!-- 轮子加速度，默认值为0.0 rad/s^2 -->
+	    <commandTopic>cmd_vel</commandTopic>             <!-- 接收geometry_msgs/Twist指令的话题，默认值为cmd_vel -->
+	    <robotBaseFrame>base_footprint</robotBaseFrame>  <!-- 机器人基坐标系，默认值为base_footprint  -->
+	    <publishWheelJointState>true</publishWheelJointState> <!-- 设置true表示发布轮子关节的sensor_msgs/JointState消息到/joint_states上，默认值为false -->
+	    <legacyMode>true</legacyMode>                    <!-- 设置true表示交换左右轮，默认值为true -->
+	  </plugin>
+	</gazebo>
+	
+
+        <gazebo reference="virtual_camera_link">
+            <sensor type="depth" name="camera">
+                <always_on>true</always_on>
+                <update_rate>20.0</update_rate>
+                <camera>
+                    <horizontal_fov>${60.0*3.14/180.0}</horizontal_fov>
+                    <image>
+                        <format>R8G8B8</format>
+                        <width>640</width>
+                        <height>480</height>
+                    </image>
+                    <clip>
+                        <near>0.05</near>
+                        <far>8.0</far>
+                    </clip>
+                </camera>
+                <plugin name="kinect_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+                    <cameraName>camera</cameraName>
+                    <alwaysOn>true</alwaysOn>
+                    <updateRate>10</updateRate>
+                    <imageTopicName>rgb/image_raw</imageTopicName>
+                    <depthImageTopicName>depth/image_raw</depthImageTopicName>
+                    <pointCloudTopicName>depth/points</pointCloudTopicName>
+                    <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+                    <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+                    <frameName>virtual_camera_link</frameName>
+                    <baseline>0.1</baseline>
+                    <distortion_k1>0.0</distortion_k1>
+                    <distortion_k2>0.0</distortion_k2>
+                    <distortion_k3>0.0</distortion_k3>
+                    <distortion_t1>0.0</distortion_t1>
+                    <distortion_t2>0.0</distortion_t2>
+                    <pointCloudCutoff>0.4</pointCloudCutoff>
+                    
+                </plugin>
+            </sensor>
+        </gazebo>  
+
+
+<gazebo reference="virtual_lidar_link">
+		<sensor type="ray" name="laser_sensor">
+			<pose>0 0 0.03 0 0 0</pose>
+			<visualize>true</visualize>
+			<update_rate>40</update_rate>
+			<ray>
+				<scan>
+					<horizontal>
+						<samples>1200</samples>
+						<resolution>1</resolution>
+						<min_angle>0</min_angle>
+						<max_angle>6.283124</max_angle>
+					</horizontal>
+				</scan>
+				<range>
+					<min>0.042</min>
+					<max>5</max>
+					<resolution>0.01</resolution>
+				</range>
+				<noise>
+					<type>gaussian</type>
+					<mean>0.0</mean>
+					<stddev>0.01</stddev>
+				</noise>
+			</ray>
+
+			<!-- plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so" -->
+			<plugin name="gazebo_ros_spark_laser" filename="libgazebo_ros_laser.so">
+				<topicName>/scan</topicName>
+				<frameName>virtual_lidar_link</frameName>
+			</plugin>
+		</sensor>
+	</gazebo>
+</robot>

@@ -1,0 +1,16 @@
+header: 
+  seq: 540
+  stamp: 
+    secs: 112
+    nsecs: 703000000
+  frame_id: ''
+status_list: 
+  - 
+    goal_id: 
+      stamp: 
+        secs: 30
+        nsecs: 528000000
+      id: "/move_base-2-30.528000000"
+    status: 4
+    text: "Failed to find a valid plan. Even after executing recovery behaviors."
+

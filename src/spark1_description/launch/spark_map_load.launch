@@ -1,0 +1,4 @@
+<launch>
+    <!--/home/ubuntu/project1/proj1/src/spark_rtabmap/scripts-->
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find spark_rtabmap)/scripts/test_map.yaml" output="screen"/>
+</launch>

@@ -1,0 +1,39 @@
+<package format="2">
+  <name>spark1_description</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for spark1_description</p>
+    <p>This package contains configuration data, 3D models and launch files
+for spark1_description robot</p>
+  </description>
+  <author>TODO</author>
+  <maintainer email="1025933301@qq.com" />
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo</depend>
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <exec_depend>move_base_msgs</exec_depend>
+  <build_depend>tf</build_depend>
+  <exec_depend>tf</exec_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <exec_depend>actionlib_msgs</exec_depend>
+  <build_depend>nav_msgs</build_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <depend>ar_track_alvar_msgs</depend>
+  <export>
+    <architecture_independent />
+  </export>
+</package>
