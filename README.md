@@ -67,7 +67,8 @@ b. Remember to change the path to the map in your own computer! Pay attention to
 ```
 rosrun spark1_description service_robot
 ```
-
+You will see effect similar to the following video:
+For more information, see /demo
 
 https://user-images.githubusercontent.com/57560216/166639279-23186191-e686-4b53-aad7-02634573e9ba.mp4
 
