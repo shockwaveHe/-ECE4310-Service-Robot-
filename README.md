@@ -1,5 +1,5 @@
 # -ECE4310-Service-Robot-
-Source code for the project Service Robot of cource ECE4310 at CUHK-Shenzhen. I am the only student to complete all the tasks.
+Source code for the project Service Robot of cource ECE4310 at CUHK-Shenzhen. I am the only student to complete all the tasks. The project description is in the /demo folder.
 
 # Dependencies
  
